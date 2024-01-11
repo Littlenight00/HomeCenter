@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl">
+  <name>Conexao</name>
+  <classpath>C:\Users\evell\Desktop\Evellyn Gomes\HomeCenter\src\banco\mysql-connector-java-8.0.28\mysql-connector-java-8.0.28.jar</classpath>
+  <driver>com.mysql.jdbc.Driver</driver>
+  <username>root</username>
+  <password>20042004</password>
+  <url>jdbc:mysql://localhost/homecenter</url>
+  <database></database>
+  <savePassword>true</savePassword>
+  <serverAddress></serverAddress>
+</jdbcDataAdapter>

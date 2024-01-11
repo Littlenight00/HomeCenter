@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Fornecedores" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="HomeCenter"/>
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[aG9tZWNlbnRlci5mb3JuZWNlZG9yIEFTICw1MywxMyxjNjhmZjNkMy01YTYyLTQ0MDUtODc5MS01
+MjUwMDE5Y2VkMjA7]]>
+	</property>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#EEEFF0"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#CACED0">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#D8D8D8"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="tableDataset" uuid="f13e6d36-5148-4ecc-bbe3-3035def80980">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<queryString>
+		<![CDATA[SELECT cod_fornecedor,
+	nome,
+	cnpj,
+	email,
+	telefone,
+	cidade,
+	uf
+FROM homecenter.fornecedor]]>
+	</queryString>
+	<field name="cod_fornecedor" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="cod_fornecedor"/>
+		<property name="com.jaspersoft.studio.field.label" value="cod_fornecedor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fornecedor"/>
+		<fieldDescription><![CDATA[codigo]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fornecedor"/>
+		<fieldDescription><![CDATA[nome]]></fieldDescription>
+	</field>
+	<field name="cnpj" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cnpj"/>
+		<property name="com.jaspersoft.studio.field.label" value="cnpj"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fornecedor"/>
+		<fieldDescription><![CDATA[cnpj]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email"/>
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fornecedor"/>
+		<fieldDescription><![CDATA[email]]></fieldDescription>
+	</field>
+	<field name="telefone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="telefone"/>
+		<property name="com.jaspersoft.studio.field.label" value="telefone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fornecedor"/>
+		<fieldDescription><![CDATA[telefone]]></fieldDescription>
+	</field>
+	<field name="cidade" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cidade"/>
+		<property name="com.jaspersoft.studio.field.label" value="cidade"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fornecedor"/>
+		<fieldDescription><![CDATA[cidade]]></fieldDescription>
+	</field>
+	<field name="uf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="uf"/>
+		<property name="com.jaspersoft.studio.field.label" value="uf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fornecedor"/>
+		<fieldDescription><![CDATA[uf]]></fieldDescription>
+	</field>
+	<title>
+		<band height="90" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement x="0" y="80" width="556" height="1" uuid="806ce5df-1219-4876-ae0c-ca7405b1f246">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="215" height="30" uuid="4e6858b7-3841-4356-bf43-b1a0bc4e7c53">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HomeCenter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="31" width="190" height="40" uuid="499a9353-2f6f-46a6-b6f6-bb37ba280ec5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Gerenciamento para lojas de material de construção.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="31" width="100" height="40" uuid="df706724-3191-4cf8-866e-64de4312157e"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Left">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Relatório gerado em:]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="353" y="47" width="130" height="20" uuid="7ba33c38-40a9-4a4c-96e8-f206c3cae9f1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="67" width="594" height="13" uuid="313522e9-8c53-4cb5-956f-a2e595588aa2"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER} + " de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="75">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="0" width="230" height="25" uuid="57aed2b1-4f4e-40a3-a6ad-54dae8dd4c5a">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fornecedores cadastrados:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="60" width="556" height="1" uuid="4a61e74a-742a-4774-8d9f-cdfd5a7fd8a7">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="25" width="555" height="30" forecolor="#E6E6E6" backcolor="#C9C9C9" uuid="15a3b34e-ce7b-4dac-af60-1c4e467033ef">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="-3" y="6" width="20" height="19" uuid="ea0cc3cb-91da-483b-be1f-19b3882cc191"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[ID]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="6" width="116" height="19" uuid="86117940-6ec5-43ce-a777-c92784d6eba1"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[Nome]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="127" y="6" width="140" height="19" uuid="20a1f7d1-7bfb-4542-98bb-5d3c087d06fe"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[Email]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="266" y="6" width="100" height="19" uuid="25a45e26-3e1e-4280-b921-2bcd7a03c305"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[CNPJ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="366" y="6" width="72" height="19" uuid="8a35d0c3-8580-4e2d-87d1-3e889e749048"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[Telefone]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="443" y="6" width="94" height="19" uuid="9b60aa2e-b357-4314-bee8-725bded8fcfb"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[Cidade]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="527" y="6" width="22" height="19" uuid="b942a435-91eb-4129-a93c-fbfe7aaba70c"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[UF]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20">
+			<staticText>
+				<reportElement x="124" y="0" width="100" height="20" uuid="58f73ebc-9f5f-4cc9-8a30-c1b594f07889">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aed29ecb-4a1e-41d6-9f3d-97d5740a68ab"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[cod_fornecedor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="0" width="100" height="20" uuid="573def3c-6d0b-47f3-8b1f-d9ddb2598157">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ff54dfbb-491e-473c-a2af-df3d3c7ed4d8"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="0" width="100" height="20" uuid="6597ff92-e5e4-4053-83dd-001ae6006dcd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4f48517e-f0da-487e-afbd-2f32e06742c7"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="293" y="0" width="100" height="20" uuid="02390179-ba42-4122-9301-7195d7bd7ec0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2149d4f7-a2b4-4e4e-b909-855a67880278"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[cnpj]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="382" y="0" width="100" height="20" uuid="129b1de6-2eaf-47f1-b3ae-dad22c276342">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bf76873d-8624-4dc4-9aa1-ad1ab072b01c"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[telefone]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="-20" width="555" height="30" forecolor="#E6E6E6" backcolor="#E6E6E6" uuid="d4c0470a-ba04-47ac-8997-45e5d2d1c674">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textField>
+					<reportElement x="1" y="5" width="16" height="20" uuid="591a2cb9-18a3-49e5-a9b1-629ac52a644f">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aed29ecb-4a1e-41d6-9f3d-97d5740a68ab"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cod_fornecedor}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="17" y="5" width="114" height="20" uuid="463229b1-4e77-4e6a-82ea-fcf45de38b43">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ff54dfbb-491e-473c-a2af-df3d3c7ed4d8"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="126" y="5" width="140" height="20" uuid="670bbbe6-1190-46f8-8eac-66f2466fb8c6">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4f48517e-f0da-487e-afbd-2f32e06742c7"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="266" y="5" width="100" height="20" uuid="7551f160-5969-4669-b864-dbc06539881a">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2149d4f7-a2b4-4e4e-b909-855a67880278"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cnpj}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="366" y="5" width="100" height="20" uuid="1bd4030d-9bca-45db-bebc-6d5c4327ff8f">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bf76873d-8624-4dc4-9aa1-ad1ab072b01c"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="444" y="5" width="100" height="20" uuid="4b589973-9e1c-4430-a2af-425324462e13">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="64313c8b-81fb-44dd-9248-e1e26bf0893d"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cidade}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="538" y="5" width="16" height="20" uuid="ee830bd6-9dce-48cc-b71f-6040ae68bfb3">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="97eb48ba-36d6-4865-81db-9e4354cb4584"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{uf}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="177">
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="147" width="556" height="30" backcolor="#E6E8E9" uuid="36aa233d-4305-48e6-974a-1bbf89bb3c8f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="156" width="556" height="13" uuid="e8bc5071-d840-430c-9196-040b616073fb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER} + " de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+</jasperReport>
